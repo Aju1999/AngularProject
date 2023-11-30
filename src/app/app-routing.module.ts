@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { DatabindingComponent } from './databinding/databinding.component';
+import { InterpolationComponent } from './databinding/interpolation/interpolation.component';
+import { ConditionalsComponent } from './databinding/conditionals/conditionals.component';
+import { OpenAPIComponent } from './remote/open-api/open-api.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
-  {path:"databinding",component:DatabindingComponent},
+  {path:"interpolation",component:InterpolationComponent},
+  {path:"conditional",component:ConditionalsComponent},
+  {path:"openapi",component:OpenAPIComponent},
+  
 ];
 
 @NgModule({

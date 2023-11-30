@@ -1,0 +1,11 @@
+<div *ngIf="condition; else elseBlock">
+  <h1>If Block</h1>
+</div>
+<button (click)="hide()">Hide it</button>
+<button (click)="show()">Show it</button>
+
+<ng-template #elseBlock>
+  <ng-form>
+    <h1>This is form</h1>
+  </ng-form>
+</ng-template>

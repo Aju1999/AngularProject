@@ -4,7 +4,6 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 
 
-
 @NgModule({
   declarations: [
     LoginComponent,
@@ -15,7 +14,8 @@ import { SignupComponent } from './signup/signup.component';
   ],
   exports:[
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+
   ]
 })
 export class UsersModule { }

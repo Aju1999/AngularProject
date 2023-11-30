@@ -1,0 +1,35 @@
+<div>
+  <h1>{{ name }}</h1>
+</div>
+
+<!-- <input type="text" id = "test1" [(ngModel)]="test" (copy)="printName()" placeholder="Text"> -->
+<br />
+
+<table>
+  <thead>
+    <th>Names</th>
+  </thead>
+  <tr *ngFor="let name of ls">
+    <td>{{ name }}</td>
+  </tr>
+</table>
+
+<!-- <app-login></app-login> -->
+<!-- <app-signup></app-signup> -->
+<!-- <ul *ngFor="let name of ls">
+<ul>{{name}}</ul>
+</ul>  -->
+
+<!-- <input type="text" #text1 [(ngModel)]="test1" (input)="valueFromTextBox(text1.value)" >
+<br>
+<label>{{test1}}</label> -->
+
+<!-- <input type="text" #text1  
+[disabled]="val"  value={{val}}
+><br>
+<input type="text" #text2 
+disabled="{{val}}"   [value]=val 
+><br>
+
+<button (click)="textBoxOn()">Enable me</button>
+<button (click)="textBoxOff()">Disable me</button> -->
