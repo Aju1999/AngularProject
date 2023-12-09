@@ -5,10 +5,12 @@ import { Component } from '@angular/core';
 import { UsersModule } from "../users/users.module";
 import { FormsModule } from '@angular/forms';
 import { ConditionalsComponent } from './conditionals/conditionals.component';
+import { DirectivesComponent } from './directives/directives.component';
 @NgModule({
     declarations: [
         InterpolationComponent,
-        ConditionalsComponent
+        ConditionalsComponent,
+        DirectivesComponent
     ],
     exports: [
         InterpolationComponent,

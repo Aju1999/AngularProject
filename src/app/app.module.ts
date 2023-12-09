@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {UsersModule} from './users/users.module'
+import { UsersModule} from './users/users.module'
 import { DatabindingModule } from './databinding/databinding.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,19 +9,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
-import { HttpClient,HttpClientModule  } from '@angular/common/http';
+import { HttpClientModule  } from '@angular/common/http';
+import { HeadfootModule } from './headfoot/headfoot.module';
+import { StylebindingModule } from './stylebinding/stylebinding.module';
+import { BootstrapsModule } from './bootstraps/bootstraps.module';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule,FormsModule,
     MatIconModule,MatListModule,MatCardModule,UsersModule,DatabindingModule,
-    HttpClientModule
+    HttpClientModule,HeadfootModule,StylebindingModule,BootstrapsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
