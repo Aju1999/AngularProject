@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./headfootimpl.component.css']
 })
 export class HeadfootimplComponent {
-
+name:string = 'This is header came form headerIMPL';
 }

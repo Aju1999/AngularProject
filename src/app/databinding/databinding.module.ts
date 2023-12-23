@@ -6,15 +6,17 @@ import { UsersModule } from "../users/users.module";
 import { FormsModule } from '@angular/forms';
 import { ConditionalsComponent } from './conditionals/conditionals.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { PipesComponent } from './pipes/pipes.component';
 @NgModule({
     declarations: [
         InterpolationComponent,
         ConditionalsComponent,
-        DirectivesComponent
+        DirectivesComponent,
+        PipesComponent
     ],
     exports: [
         InterpolationComponent,
-        // ConditionalsComponent
+        PipesComponent
     ],
     imports: [
         CommonModule,

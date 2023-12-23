@@ -11,6 +11,7 @@ import { StylebindingComponent } from './stylebinding/stylebinding/stylebinding.
 import { FormsComponent } from './bootstraps/forms/forms.component';
 import { DogbreedsComponent } from './bootstraps/dogbreeds/dogbreeds.component';
 import { ValidationsComponent } from './bootstraps/validations/validations.component';
+import { PipesComponent } from './databinding/pipes/pipes.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path:"bforms",component:FormsComponent},
   {path:"bdogs",component:DogbreedsComponent},
   {path:"bvalidations",component:ValidationsComponent},
+  {path:"pipes",component:PipesComponent},
   
 ];
 
