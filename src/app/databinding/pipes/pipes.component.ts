@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class PipesComponent 
 implements OnInit
 {
-
 name: string[] = ['Ajay','Vijay','raj','rajnI'];
 
 ngOnInit(): void {
