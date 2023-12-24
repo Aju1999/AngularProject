@@ -14,6 +14,7 @@ import { HeadfootModule } from './headfoot/headfoot.module';
 import { StylebindingModule } from './stylebinding/stylebinding.module';
 import { BootstrapsModule } from './bootstraps/bootstraps.module';
 import { FormsModule } from '@angular/forms';
+import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,HeadfootModule,StylebindingModule,BootstrapsModule
     
   ],
-  providers: [],
+  providers: [ {provide : LocationStrategy , useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
