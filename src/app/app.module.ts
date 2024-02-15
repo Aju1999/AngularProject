@@ -11,7 +11,6 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule  } from '@angular/common/http';
 import { HeadfootModule } from './headfoot/headfoot.module';
-import { StylebindingModule } from './stylebinding/stylebinding.module';
 import { BootstrapsModule } from './bootstraps/bootstraps.module';
 import { FormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
@@ -26,7 +25,7 @@ import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
     AppRoutingModule,
     BrowserAnimationsModule,FormsModule,
     MatIconModule,MatListModule,MatCardModule,UsersModule,DatabindingModule,
-    HttpClientModule,HeadfootModule,StylebindingModule,BootstrapsModule
+    HttpClientModule,HeadfootModule,BootstrapsModule
     
   ],
   providers: [ {provide : LocationStrategy , useClass: HashLocationStrategy}],

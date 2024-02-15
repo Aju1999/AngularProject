@@ -5,8 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { DogbreedsComponent } from './dogbreeds/dogbreeds.component';
 import { ValidationsComponent } from './validations/validations.component';
 
-
-
 @NgModule({
   declarations: [
     FormsComponent,

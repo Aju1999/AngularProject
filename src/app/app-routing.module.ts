@@ -7,25 +7,28 @@ import { OpenAPIComponent } from './remote/open-api/open-api.component';
 import { DirectivesComponent } from './databinding/directives/directives.component';
 import { GenderindentityComponent } from './remote/genderindentity/genderindentity.component';
 import { HeadfootimplComponent } from './headfoot/headfootimpl/headfootimpl.component';
-import { StylebindingComponent } from './stylebinding/stylebinding/stylebinding.component';
 import { FormsComponent } from './bootstraps/forms/forms.component';
 import { DogbreedsComponent } from './bootstraps/dogbreeds/dogbreeds.component';
 import { ValidationsComponent } from './bootstraps/validations/validations.component';
 import { PipesComponent } from './databinding/pipes/pipes.component';
+import { SignupComponent } from './users/signup/signup.component';
+import { LoginComponent } from './users/login/login.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
-  {path:"interpolation",component:InterpolationComponent},
-  {path:"conditional",component:ConditionalsComponent},
-  {path:"openapi",component:OpenAPIComponent},
-  {path:"directives",component:DirectivesComponent},
-  {path:"genderindentity",component:GenderindentityComponent},
-  {path:"headfoot",component:HeadfootimplComponent},
-  {path:"stylebind",component:StylebindingComponent},
-  {path:"bforms",component:FormsComponent},
-  {path:"bdogs",component:DogbreedsComponent},
-  {path:"bvalidations",component:ValidationsComponent},
-  {path:"pipes",component:PipesComponent},
+  // {path:"interpolation",component:InterpolationComponent},
+  // {path:"conditional",component:ConditionalsComponent},
+  // {path:"openapi",component:OpenAPIComponent},
+  // {path:"directives",component:DirectivesComponent},
+  // {path:"genderindentity",component:GenderindentityComponent},
+  // {path:"headfoot",component:HeadfootimplComponent},
+  // {path:"stylebind",component:StylebindingComponent},
+  // {path:"bforms",component:FormsComponent},
+  // {path:"bdogs",component:DogbreedsComponent},
+  // {path:"bvalidations",component:ValidationsComponent},
+  // {path:"pipes",component:PipesComponent},
+  {path:"login",component:LoginComponent},
+  {path:"register",component:SignupComponent},
   
 ];
 
