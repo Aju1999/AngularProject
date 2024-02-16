@@ -1,1 +1,69 @@
-<p>login works!</p>
+<section class="vh-90">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+            class="img-fluid" alt="Sample image">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+
+          <form (ngSubmit)="authenticate()">
+
+            <div class="divider d-flex align-items-center my-4">
+                <p class="text-center fw-bold mx-3 mb-0  fs-6">Login</p>
+            </div>
+            <!-- Email input -->
+            <!-- <mdb-form-control class="form-outline mb-4">
+                <input mdbInput type="email" id="form1Example1" class="form-control" />
+                <label mdbLabel class="form-label" for="form1Example1">Email address</label>
+              </mdb-form-control> -->
+            <label class="form-label fs-6" for="form3Example3">Email address</label>
+            <div class="form-outline ">
+              <input type="email" id="form3Example3" class="form-control form-control-lg"
+                placeholder="Enter a valid email address" [(ngModel)]="login.username"
+                name="username" autocomplete="username"/>
+            </div>
+            <div class="form-outline mt-0 mb-4" *ngIf="fieldErrors && fieldErrors['username']">
+              <small style="color: red; " class="fs-6" >{{fieldErrors['username']}}</small>
+            </div>
+
+            <!-- Password input -->
+            <label class="form-label mt-4 fs-6" for="form3Example4">Password</label>
+            <div class="form-outline">
+              <input type="password" id="form3Example4" class="form-control form-control-lg"
+                placeholder="Enter password" [(ngModel)]="login.password"
+                name="password" autocomplete="current-password"/>
+            </div>
+            
+            <div class="form-outline mt-0 mb-4" *ngIf="fieldErrors && fieldErrors['password']">
+              <small style="color: red; " class="fs-6" >{{fieldErrors['password']}}</small>
+            </div>
+            <div class="form-outline mt-0 mb-4" *ngIf="mainErrors ">
+                <small style="color: red; " class="fs-6" >{{mainErrors}}</small>
+            </div>
+
+            <!-- <div class="d-flex justify-content-between align-items-center">
+              <div class="form-check mb-0">
+                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                <label class="form-check-label" for="form2Example3">
+                  Remember me
+                </label>
+              </div> 
+              <a href="#!" class="text-body">Forgot password?</a>
+            </div>-->
+  
+            <div class="text-center text-lg-start mt-0 pt-2">
+              <button type="submit" class="btn btn-primary btn-lg me-3"
+                style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+                <p class="small fw-bold mt-2 pt-1 mb-0"><label class="fs-6">Don't have an account? 
+                    <a href="/#/register"
+                    class="link-danger mt-4">Register</a>
+                    </label>
+                </p>
+            </div>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -20,7 +20,5 @@ export class TestService {
   findGender(name: string){
     return this.client.get(`https://api.genderize.io?name=${name}`);
   }
-  register(Person: Person):Observable<any> {
-    return this.client.post("http://localhost:9595/person/register",Person);
-  }
+
 }

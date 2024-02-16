@@ -14,6 +14,8 @@ import { HeadfootModule } from './headfoot/headfoot.module';
 import { BootstrapsModule } from './bootstraps/bootstraps.module';
 import { FormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
+import { NgxWebstorageModule, SessionStorageService } from 'ngx-webstorage';
+import { authInterceptorProviders } from './service/AuthInterceptor';
 
 @NgModule({
   declarations: [
@@ -25,10 +27,10 @@ import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
     AppRoutingModule,
     BrowserAnimationsModule,FormsModule,
     MatIconModule,MatListModule,MatCardModule,UsersModule,DatabindingModule,
-    HttpClientModule,HeadfootModule,BootstrapsModule
+    HttpClientModule,HeadfootModule,BootstrapsModule,NgxWebstorageModule.forRoot()
     
   ],
-  providers: [ {provide : LocationStrategy , useClass: HashLocationStrategy}],
+  providers: [ {provide : LocationStrategy , useClass: HashLocationStrategy},authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

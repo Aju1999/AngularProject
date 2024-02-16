@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { FormsModule } from '@angular/forms';
 import { HeadfootModule } from '../headfoot/headfoot.module';
+import { SessionStorageService } from 'ngx-webstorage';
 
 
 @NgModule({
@@ -18,8 +19,7 @@ import { HeadfootModule } from '../headfoot/headfoot.module';
   exports:[
     LoginComponent,
     SignupComponent,
-
-
-  ]
+  ],
+  providers:[SessionStorageService]
 })
 export class UsersModule { }

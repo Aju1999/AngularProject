@@ -1,15 +1,15 @@
-<body>
+<body style="height: 100vh!important;">
     <form method="post" (ngSubmit)="registered()">
         <label for="name">Name:</label>
         <input  [(ngModel)]="person.name" type="text" id="name" name="name" required>
-        <div *ngIf="errorResp && errorResp['mobile']">
+        <div *ngIf="errorResp && errorResp['name']">
             <small style="color: red;">{{errorResp['name']}}</small>
         </div>
 
         <label for="name">City:</label>
         <input [(ngModel)]="person.city" type="text" id="city" name="city" required>
-        <div *ngIf="errorResp && errorResp['name']">
-            <small style="color: red;">{{errorResp['name']}}</small>
+        <div *ngIf="errorResp && errorResp['city']">
+            <small style="color: red;">{{errorResp['city']}}</small>
         </div>
 
         <label for="email">Email:</label>

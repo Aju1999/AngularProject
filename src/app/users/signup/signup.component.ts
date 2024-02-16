@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Person } from 'src/app/models/Person';
+import { UserService } from 'src/app/service/UserService';
 import { TestService } from 'src/app/service/test.service';
 
 @Component({
@@ -11,12 +12,13 @@ export class SignupComponent {
   person : Person = new Person;
   // errorResp : ApiResponse = new ApiResponse;
   errorResp: any = {};
-  public constructor(private testService: TestService){   }
+  mainErrors:any = "";
+  public constructor(private userService: UserService){   }
   
   registered(){
     console.log(this.person);
 
-   this.testService.register(this.person).subscribe(
+   this.userService.register(this.person).subscribe(
     (data:any)=>{
       console.log("Registered Successfully!"+data);
        alert("Registered");
@@ -26,6 +28,10 @@ export class SignupComponent {
       // console.log(error);
       if(error.status==400){
         this.errorResp = error.error;
+      }
+      else {
+        this.mainErrors =  error.error;
+        this.errorResp = {};
       }
     }
    );

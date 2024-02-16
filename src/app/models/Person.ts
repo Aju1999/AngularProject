@@ -18,3 +18,14 @@ export class Person{
     }
 
 }
+
+export class loginRequest{
+
+    username: string;
+    password: string;
+    
+    public constructor(){
+        this.username ="";
+        this.password ="";
+    }
+}
