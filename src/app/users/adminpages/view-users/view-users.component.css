@@ -1,0 +1,32 @@
+.fixed-size {
+    height: 500px; /* Set the desired height */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+
+
+.social_icon {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: left;
+    width: 100%;
+}
+
+.social_icon li {
+    width: 38px;
+    height: 38px;
+    background: rgb(143, 56, 224);
+    border-radius: 100%;
+    margin-right: 10px;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+    
+}
+
+.circular-button {
+    border-radius: 50%; /* Make the border radius 50% to create a circular shape */
+    width: 50px; /* Set the width of the button */
+    height: 50px; /* Set the height of the button */
+  }

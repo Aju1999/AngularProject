@@ -5,12 +5,21 @@ import { SignupComponent } from './signup/signup.component';
 import { FormsModule } from '@angular/forms';
 import { HeadfootModule } from '../headfoot/headfoot.module';
 import { SessionStorageService } from 'ngx-webstorage';
+import { AdminhomeComponent } from './adminpages/adminhome/adminhome.component';
+import { UserhomeComponent } from './userpages/userhome/userhome.component';
+import { ViewUsersComponent } from './adminpages/view-users/view-users.component';
+import { UserdetailsComponent } from './userpages/userdetails/userdetails.component';
 
 
 @NgModule({
   declarations: [
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    AdminhomeComponent,
+    UserhomeComponent,
+    ViewUsersComponent,
+    UserdetailsComponent,
+    
   ],
   imports: [
     CommonModule,FormsModule,
@@ -18,7 +27,7 @@ import { SessionStorageService } from 'ngx-webstorage';
   ],
   exports:[
     LoginComponent,
-    SignupComponent,
+    SignupComponent,ViewUsersComponent
   ],
   providers:[SessionStorageService]
 })

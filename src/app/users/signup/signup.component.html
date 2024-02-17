@@ -25,19 +25,23 @@
         </div>
 
         <label for="username">Username:</label>
-        <input  [(ngModel)]="person.username" type="text" id="username" name="username" required>
+        <input  [(ngModel)]="person.username" type="text" id="username" name="username" required autocomplete="username">
         <div *ngIf="errorResp && errorResp['username']">
             <small style="color: red;">{{errorResp['username']}}</small>
         </div>
 
         <label for="password">Password:</label>
-        <input  [(ngModel)]="person.password" type="password" id="password" name="password" required>
+        <input  [(ngModel)]="person.password" type="password" id="password" name="password" required autocomplete="current-password">
         <div *ngIf="errorResp && errorResp['password']">
             <small style="color: red;">{{errorResp['password']}}</small>
         </div>
 
         <label for="roles">Role:</label>
-        <input  [(ngModel)]="person.roles" type="text" id="roles" name="roles" required>
+        <!-- <input  [(ngModel)]="person.roles" type="text" id="roles" name="roles" required> -->
+        <select [(ngModel)]="person.roles"  id="roles" name="roles" required>
+            <option value="" disabled selected hidden>Choose a role</option>
+            <option *ngFor="let role of userRole" [value]="role.toUpperCase()">{{ role }}</option>
+        </select>
         <div *ngIf="errorResp && errorResp['roles']">
             <small style="color: red;">{{errorResp['roles']}}</small>
         </div>

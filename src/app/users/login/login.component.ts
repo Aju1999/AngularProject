@@ -42,17 +42,25 @@ export class LoginComponent implements OnInit{
       
               if (this.loginService.getUserRole() === 'ADMIN') {
                 this.loginService.loginStatusSubject.next(true);
-                // this.router.navigate(['/adminhome']);
+                this.router.navigate(['/admin/home']);
                 console.log("Admin is logged in.")
               }
-              // else if{}
+              else if(this.loginService.getUserRole() === 'USER'){
+                this.loginService.loginStatusSubject.next(true);
+                // this.router.navigate(['/adminhome']);
+                console.log("User is logged in.")
+              }
             }
           );
       },
       error=>{
-        console.log(error);
+        console.log(error.status);
         if(error.status==400){
           this.fieldErrors = error.error;
+        }
+        else if(error.status==0){
+          this.fieldErrors = {};
+          this.mainErrors =  "Application Server is Unreachable.";
         }
         else {
           this.fieldErrors = {};

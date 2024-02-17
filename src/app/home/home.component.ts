@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { TestService } from '../service/test.service';
 @Component({
@@ -8,5 +8,5 @@ import { TestService } from '../service/test.service';
 })
 export class HomeComponent  {
   
-
+  @Input() name: string="Welcome to Employee Management System.";
 }

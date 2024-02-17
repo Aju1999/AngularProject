@@ -13,6 +13,8 @@ import { ValidationsComponent } from './bootstraps/validations/validations.compo
 import { PipesComponent } from './databinding/pipes/pipes.component';
 import { SignupComponent } from './users/signup/signup.component';
 import { LoginComponent } from './users/login/login.component';
+import { ViewUsersComponent } from './users/adminpages/view-users/view-users.component';
+import { AdminhomeComponent } from './users/adminpages/adminhome/adminhome.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -29,6 +31,14 @@ const routes: Routes = [
   // {path:"pipes",component:PipesComponent},
   {path:"login",component:LoginComponent},
   {path:"register",component:SignupComponent},
+  
+  {path: 'admin',
+    children: [
+      { path: 'viewusers', component: ViewUsersComponent },
+      { path: 'home', component: AdminhomeComponent},
+    ]
+  },
+  
   
 ];
 

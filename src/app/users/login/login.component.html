@@ -28,17 +28,17 @@
             </div>
 
             <!-- Password input -->
-            <label class="form-label mt-4 fs-6" for="form3Example4">Password</label>
+            <label class="form-label mt-4 fs-6 mb-1" for="form3Example4">Password</label>
             <div class="form-outline">
               <input type="password" id="form3Example4" class="form-control form-control-lg"
                 placeholder="Enter password" [(ngModel)]="login.password"
                 name="password" autocomplete="current-password"/>
             </div>
             
-            <div class="form-outline mt-0 mb-4" *ngIf="fieldErrors && fieldErrors['password']">
+            <div class="form-outline mt-1 mb-3" *ngIf="fieldErrors && fieldErrors['password']">
               <small style="color: red; " class="fs-6" >{{fieldErrors['password']}}</small>
             </div>
-            <div class="form-outline mt-0 mb-4" *ngIf="mainErrors ">
+            <div class="form-outline mt-1 mb-3" *ngIf="mainErrors ">
                 <small style="color: red; " class="fs-6" >{{mainErrors}}</small>
             </div>
 
