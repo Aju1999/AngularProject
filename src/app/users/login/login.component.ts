@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SessionStorageService } from 'ngx-webstorage';
 import { loginRequest } from 'src/app/models/Person';
 import { LoginService } from 'src/app/service/LoginService';
@@ -14,9 +15,9 @@ export class LoginComponent implements OnInit{
   mainErrors:any ="";
 
   login : loginRequest =new loginRequest;
-  router: any;
+  // router: any;
 
-  constructor(private userService: UserService,private loginService:LoginService,){
+  constructor(private userService: UserService,private loginService:LoginService,private router:Router){
 
   }
   ngOnInit(): void {
@@ -42,12 +43,13 @@ export class LoginComponent implements OnInit{
       
               if (this.loginService.getUserRole() === 'ADMIN') {
                 this.loginService.loginStatusSubject.next(true);
-                this.router.navigate(['/admin/home']);
+                // this.router.navigate(['/admin/home']);
+                this.router.navigate(['/admin/viewusers']);
                 console.log("Admin is logged in.")
               }
               else if(this.loginService.getUserRole() === 'USER'){
                 this.loginService.loginStatusSubject.next(true);
-                // this.router.navigate(['/adminhome']);
+                this.router.navigate(['/user/home']);
                 console.log("User is logged in.")
               }
             }
