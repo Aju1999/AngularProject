@@ -1,0 +1,29 @@
+    <form method="post" (ngSubmit)="registered()" #employeeForm="ngForm">
+    <!-- <form method="post" > -->
+        <label for="firstname">First Name:</label>
+        <input  [(ngModel)]="employees.firstname" type="text" id="firstname" name="firstname" required>
+        <!-- <div *ngIf="errorResp && errorResp['name']">
+            <small style="color: red;">{{errorResp['name']}}</small>
+        </div> -->
+
+        <label for="name">Last Name:</label>
+        <input  [(ngModel)]="employees.lastname" type="text" id="lastname" name="lastname" required>
+         <!--<div *ngIf="errorResp && errorResp['name']">
+            <small style="color: red;">{{errorResp['name']}}</small>
+        </div> -->
+
+        <label for="name">City:</label>
+        <input [(ngModel)]="employees.city" type="text" id="city" name="city" required>
+        <!-- <div *ngIf="errorResp && errorResp['city']">
+            <small style="color: red;">{{errorResp['city']}}</small>
+        </div> -->
+
+        <label for="email">Email:</label>
+         <input  [(ngModel)]="employees.email" type="email" id="email" name="email" required>
+       <!-- <div *ngIf="errorResp && errorResp['email']">
+            <small style="color: red;">{{errorResp['email']}}</small>
+        </div> -->
+
+        <input type="submit" value="Submit" [disabled]="!employeeForm.valid">
+        <input type="button" value="Cancel" (click)="sendCancel()">
+    </form>

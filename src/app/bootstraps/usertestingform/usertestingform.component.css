@@ -1,0 +1,45 @@
+.containermain {
+    display: flex; /* Use Flexbox */
+    max-height: 100vh;
+    overflow: hidden;
+}
+.table-responsive {
+    max-height: calc(100vh - 100px); /* Adjust the height as needed */
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+.container1 {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+}
+.section{
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    flex: 1; 
+}
+.selected {
+    background-color: #2e86e4; /* Change the background color to indicate selection */
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #efd8d8;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Change cursor to pointer on hover */
+tr:hover {
+    cursor: pointer;
+}

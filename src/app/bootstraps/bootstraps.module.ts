@@ -4,15 +4,20 @@ import { FormsComponent } from './forms/forms.component';
 import { FormsModule } from '@angular/forms';
 import { DogbreedsComponent } from './dogbreeds/dogbreeds.component';
 import { ValidationsComponent } from './validations/validations.component';
+import { HeadfootModule } from '../headfoot/headfoot.module';
+import { UsertestingformComponent } from './usertestingform/usertestingform.component';
+import { InuserformComponent } from './inuserform/inuserform.component';
 
 @NgModule({
   declarations: [
     FormsComponent,
     DogbreedsComponent,
-    ValidationsComponent
+    ValidationsComponent,
+    UsertestingformComponent,
+    InuserformComponent
   ],
   imports: [
-    CommonModule,FormsModule
+    CommonModule,FormsModule,HeadfootModule
   ]
 })
 export class BootstrapsModule { 

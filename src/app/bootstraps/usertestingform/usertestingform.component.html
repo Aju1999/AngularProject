@@ -1,0 +1,37 @@
+<div class="container" style="max-height: 95vh;">
+    <div class="containermain">
+        <div class=" section table-responsive"  style="overflow-y: auto; overflow-x: auto;">
+            <h2>List Of Users</h2>
+            <table class="table table-success table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let emp of employees" (click)="showDetails(emp.id)"
+                        [class.selected]="emp.id === selectedEmployeeId">
+                        <th scope="row" style="min-width: 50px;">{{ emp.id }}</th>
+                        <td style="min-width: 50px;">{{ emp.firstname }}</td>
+                        <td style="min-width: 50px;">{{ emp.lastname }}</td>
+                        <td style="min-width: 50px;">{{ emp.email }}</td>
+                        <td style="min-width: 50px;">{{ emp.city }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <ng-container>
+            <div class="section" *ngIf="isOpened">
+                <h2>Person</h2>
+                <app-inuserform style="max-height: 100vh;" [pid]="selectedEmployeeId" (dataEvent)="receiveData($event)"></app-inuserform>
+            </div>
+        </ng-container>
+    </div>
+    <div class="container1">
+        <button class="btn btn-primary" (click)="newPerson()">Add New Person</button>
+    </div>
+</div>

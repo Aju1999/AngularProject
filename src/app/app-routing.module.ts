@@ -15,20 +15,11 @@ import { SignupComponent } from './users/signup/signup.component';
 import { LoginComponent } from './users/login/login.component';
 import { ViewUsersComponent } from './users/adminpages/view-users/view-users.component';
 import { AdminhomeComponent } from './users/adminpages/adminhome/adminhome.component';
+import { UsertestingformComponent } from './bootstraps/usertestingform/usertestingform.component';
+import { InuserformComponent } from './bootstraps/inuserform/inuserform.component';
 
 const routes: Routes = [
-  {path:"",component:HomeComponent},
-  // {path:"interpolation",component:InterpolationComponent},
-  // {path:"conditional",component:ConditionalsComponent},
-  // {path:"openapi",component:OpenAPIComponent},
-  // {path:"directives",component:DirectivesComponent},
-  // {path:"genderindentity",component:GenderindentityComponent},
-  // {path:"headfoot",component:HeadfootimplComponent},
-  // {path:"stylebind",component:StylebindingComponent},
-  // {path:"bforms",component:FormsComponent},
-  // {path:"bdogs",component:DogbreedsComponent},
-  // {path:"bvalidations",component:ValidationsComponent},
-  // {path:"pipes",component:PipesComponent},
+  {path:"",component:HomeComponent},  
   {path:"login",component:LoginComponent},
   {path:"register",component:SignupComponent},
   
@@ -38,7 +29,23 @@ const routes: Routes = [
       { path: 'home', component: AdminhomeComponent},
     ]
   },
-  
+  {path: 'testingui',
+  children: [
+    {path:"usertest",component:UsertestingformComponent},
+    {path:"inuser",component:InuserformComponent},
+  ]
+},
+  //Testing Paths
+  // {path:"interpolation",component:InterpolationComponent},
+  // {path:"conditional",component:ConditionalsComponent},
+  // {path:"openapi",component:OpenAPIComponent},
+  // {path:"directives",component:DirectivesComponent},
+  // {path:"genderindentity",component:GenderindentityComponent},
+  // {path:"headfoot",component:HeadfootimplComponent},
+  // {path:"stylebind",component:StylebindingComponent},
+  // {path:"bforms",component:FormsComponent},
+
+  // {path:"pipes",component:PipesComponent},
   
 ];
 
